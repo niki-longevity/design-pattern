@@ -3,9 +3,9 @@ package org.example.decorator.impl;
 import org.example.decorator.SmsDecorator;
 import org.example.decorator.SmsSender;
 
+// 具体装饰器：失败自动重试
 public class RetrySmsDecorator extends SmsDecorator {
     private final int maxRetryCount;
-
     public RetrySmsDecorator(SmsSender sender, int maxRetryCount) {
         super(sender);
         this.maxRetryCount = maxRetryCount;
